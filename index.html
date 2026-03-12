@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vasily Trofimchuk</title>
+    <meta name="description" content="Entrepreneur. Builder. Investor.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --border: #222;
+            --text: #e5e5e5;
+            --text-muted: #888;
+            --accent: #3b82f6;
+            --accent-dim: #1e3a5f;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 80px 0 48px;
+        }
+
+        .hero h1 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .hero .bio {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+
+        .socials {
+            display: flex;
+            gap: 16px;
+        }
+
+        .socials a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .socials a:hover {
+            color: var(--text);
+        }
+
+        .socials a svg {
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            margin-right: 6px;
+            fill: currentColor;
+        }
+
+        /* Sections */
+        section {
+            padding: 32px 0;
+        }
+
+        section h2 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        /* Project cards */
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .card {
+            display: block;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px 24px;
+            text-decoration: none;
+            color: var(--text);
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .card:hover {
+            border-color: #333;
+            background: #1a1a1a;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+
+        .card-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .card-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        .stars {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .stars svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+        }
+
+        .lang {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .lang-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #3178c6;
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 0 64px;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .hero { padding: 48px 0 32px; }
+            .hero h1 { font-size: 1.5rem; }
+            .card { padding: 16px 18px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1>Vasily Trofimchuk</h1>
+            <p class="bio">Entrepreneur. Builder. Investor.</p>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/vasily-trofimchuk/" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    LinkedIn
+                </a>
+                <a href="https://x.com/VTrofimchuk" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    X
+                </a>
+                <a href="https://github.com/vasilytrofimchuk" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    GitHub
+                </a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Products</h2>
+            <div class="projects">
+                <a class="card" href="https://selectic.ai" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <span class="card-name">Selectic.ai</span>
+                    </div>
+                    <p class="card-desc">AI agent that collects competing quotes and negotiates prices for major purchases</p>
+                </a>
+                <a class="card" href="https://soulroom.ai" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <span class="card-name">Soulroom.ai</span>
+                    </div>
+                    <p class="card-desc">Build and manage hybrid teams of AI agents and humans under unified governance</p>
+                </a>
+                <a class="card" href="https://uniton.ai" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <span class="card-name">Uniton.ai</span>
+                    </div>
+                    <p class="card-desc">AI discovery and visibility platform for startups and digital brands</p>
+                </a>
+                <a class="card" href="https://directly.email" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <span class="card-name">Directly.email</span>
+                    </div>
+                    <p class="card-desc">AI-powered cold email outreach with pre-warmed domains to protect sender reputation</p>
+                </a>
+                <a class="card" href="https://deck.direct" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <span class="card-name">Deck.direct</span>
+                    </div>
+                    <p class="card-desc">Upload a PDF and get a shareable link — simpler alternative to DocSend</p>
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Open Source</h2>
+            <div class="projects">
+                <a class="card" href="https://github.com/quoroom-ai/room" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <span class="card-name">room</span>
+                        <div class="card-meta">
+                            <span class="lang"><span class="lang-dot"></span> TypeScript</span>
+                            <span class="stars"><svg viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg> 603</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">Open-source swarm intelligence engine. Self-governing AI collectives running locally via MCP</p>
+                </a>
+                <a class="card" href="https://github.com/kibitzsh/kibitz" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <span class="card-name">kibitz</span>
+                        <div class="card-meta">
+                            <span class="lang"><span class="lang-dot"></span> TypeScript</span>
+                            <span class="stars"><svg viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg> 473</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">Real-time decoded feed of AI agent actions — monitor multiple Claude Code & Codex sessions</p>
+                </a>
+                <a class="card" href="https://github.com/daymonio/daymon" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <span class="card-name">daymon</span>
+                        <div class="card-meta">
+                            <span class="lang"><span class="lang-dot"></span> TypeScript</span>
+                            <span class="stars"><svg viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg> 376</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">Puts your favorite AI to work 24/7. Schedules, remembers, and orchestrates your virtual team</p>
+                </a>
+                <a class="card" href="https://github.com/vasilytrofimchuk/claude-visual-feedback" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <span class="card-name">claude-visual-feedback</span>
+                        <div class="card-meta">
+                            <span class="lang"><span class="lang-dot" style="background:#f1e05a"></span> JavaScript</span>
+                            <span class="stars"><svg viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg> 66</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">Chrome extension + MCP server: capture screenshots, circle issues, send to Claude Code for automatic fixes</p>
+                </a>
+                <a class="card" href="https://github.com/vasilytrofimchuk/domainsearcher-app" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <span class="card-name">domainsearcher-app</span>
+                        <div class="card-meta">
+                            <span class="lang"><span class="lang-dot" style="background:#f1e05a"></span> JavaScript</span>
+                            <span class="stars"><svg viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg> 7</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">Score and choose the best domain name for your startup — AI-powered generation with multi-dimensional scoring</p>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Vasily Trofimchuk</p>
+        </footer>
+    </div>
+</body>
+</html>
