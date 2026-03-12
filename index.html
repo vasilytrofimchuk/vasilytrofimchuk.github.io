@@ -383,14 +383,24 @@
             { el: 'cvf-stars', owner: 'vasilytrofimchuk', repo: 'claude-visual-feedback' },
             { el: 'ds-stars', owner: 'vasilytrofimchuk', repo: 'domainsearcher-app' },
         ];
-        repos.forEach(({ el, owner, repo }) => {
+        const container = document.querySelectorAll('.projects')[1];
+        Promise.all(repos.map(({ el, owner, repo }) =>
             fetch(`https://api.github.com/repos/${owner}/${repo}`)
                 .then(r => r.json())
                 .then(d => {
                     const span = document.getElementById(el);
                     if (span && d.stargazers_count != null) span.textContent = d.stargazers_count;
+                    return d.stargazers_count || 0;
                 })
-                .catch(() => {});
+                .catch(() => 0)
+        )).then(counts => {
+            const cards = [...container.children];
+            cards.sort((a, b) => {
+                const sa = parseInt(a.querySelector('.stars span')?.textContent) || 0;
+                const sb = parseInt(b.querySelector('.stars span')?.textContent) || 0;
+                return sb - sa;
+            });
+            cards.forEach(c => container.appendChild(c));
         });
     </script>
 </body>
