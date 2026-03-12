@@ -187,18 +187,22 @@
         .card-links {
             display: flex;
             gap: 12px;
-            margin-top: 8px;
+            margin-top: 10px;
         }
 
         .card-links a {
             color: var(--accent);
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             text-decoration: none;
-            transition: color 0.2s;
+            padding: 3px 10px;
+            border: 1px solid var(--accent-dim);
+            border-radius: 4px;
+            transition: all 0.2s;
         }
 
         .card-links a:hover {
             color: var(--text);
+            border-color: var(--text-muted);
         }
 
         .lang {
